@@ -1,0 +1,38 @@
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+}
+
+.sidebar {
+    background-color: rgb(35 55 75 / 90%);
+    color: #fff;
+    padding: 16px 20px;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 12px;
+    border-radius: 10px;
+}
+
+.CloseButton {
+    /* background-color: rgb(35 55 75 / 90%); */
+    /* color: #fff; */
+    padding: 16px 20px;
+    z-index: 2;
+    position: absolute;
+    /* bottom: 20px; */
+    top: 0;
+    right: 0;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.chooseDrowdown {
+  padding: 4px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}

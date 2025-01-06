@@ -1,0 +1,18 @@
+.mysidebar {
+    background-color: rgb(35 55 75 / 90%);
+    color: #fff;
+    padding: 16px 20px;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.bus {
+    padding: 5px;
+    color: black;
+    margin: 10px;
+    border-radius: 5px;
+}
