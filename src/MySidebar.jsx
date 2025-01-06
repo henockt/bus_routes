@@ -6,7 +6,7 @@ function MySidebar({ station, destination }) {
     const [ buses, setBuses ] = useState([]);
 
     useEffect(() => {
-        async function getBuses() {
+        (async function () {
             const { data } = await supabase.from('bus').select();
 
             let currbuses = [];
@@ -17,8 +17,7 @@ function MySidebar({ station, destination }) {
             });
 
             setBuses(currbuses);
-        };
-        getBuses();
+        })();
     }, [station, destination]);
 
     return (

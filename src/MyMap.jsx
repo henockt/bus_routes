@@ -103,17 +103,18 @@ function MyMap() {
             .setLngLat([station.long, station.lat]);
         if (station.stationid === destId) {
             marker.setPopup(new mapboxgl.Popup({ offset: 25 }).setText("Your Destination"));
+        } else {
+            marker.getElement().onclick = () => {
+                setStartStation(station);
+            };
         }
-        marker.getElement().onclick = () => {
-            setStartStation(station);
-        };
         marker.addTo(mapRef.current);
         return marker;
     };
 
     // add all stations initially
     useEffect(() => {
-        async function add() {
+        (async function () {
             mapMarkers.current = [];
 
             const { data } = await supabase.from('station').select();
@@ -123,8 +124,7 @@ function MyMap() {
             });
 
             setStations(data);
-        }
-        add();
+        })();
     }, []);
 
     // add map
