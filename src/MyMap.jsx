@@ -66,6 +66,7 @@ function MyMap() {
                 const marker = addMarker(station, -1);
                 mapMarkers.current.push(marker);
             });
+            setDestStation(null);
         } else {
             // for selectedStationID, find all other stations that can reach it
             setDestStation(stations[Number(selectedStationID) - 1]);
