@@ -53,7 +53,7 @@ function ETAService({ bus, station }) {
                                         response.json().then((data) => {
                                             // data["routes"][0]["duration"] is the time in seconds
                                             let minutes = data["routes"][0]["duration"] / 60;
-                                            setETA(minutes.toFixed(0).toString());
+                                            setETA(minutes.toFixed(0).toString() + " mins");
                                         });
                                     });
             }
